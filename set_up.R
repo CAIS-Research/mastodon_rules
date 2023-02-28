@@ -16,7 +16,6 @@ token_m <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "rtoot_token.
 #get access using api call with secret token
 #https://instances.social/api/token 
 
-sec_tok <- "RHVKW7m8Fr75vM3At5QsjG5nIPLR2t1NRAfBoJGBlBzv6CTkkstlsDzY8c5aWVjkEft0C8bwmjtBqI7a6OBmO9wyc1nVlqWDE0Ke6EiPUudq0N1HOPOdlCGxew3SVKRN"
 
 inc <- get_fedi_instances(token = sec_tok, n = 20)
 
