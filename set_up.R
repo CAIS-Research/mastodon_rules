@@ -3,6 +3,8 @@
 # install.packages("rtoot")
 library(rtoot)
 
+# from rtoot package 
+
 vignette("auth")
 auth_setup()
 
@@ -15,7 +17,9 @@ auth_setup()
 
 
 # get access using api call with secret token
-# run token.r
+# secret token is needed to get access to social.instances
+# save the token in a new object and use it in the get_fedi_instances() function
+
 # https://instances.social/api/token 
 
 
