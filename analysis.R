@@ -11,17 +11,22 @@ elements <- lapply(out_list_ToS, function(x) {
 })
 
 elements
-sum(is.na(elements))
+sum(!is.na(elements))
+
+lapply(elements, tail, 1)
+
+tail(elements) # last elements
+tail(instance_name)
 
 # convert list to dataframe
-test <- data.frame(instance = names(elements), tos = sapply(elements, paste, collapse = ","), row.names = NULL)
+tmp <- data.frame(instance = names(elements), tos = sapply(elements, paste, collapse = ","), row.names = NULL)
 
 # paste converts NA to class character
-test[test == "NA"] <- NA
+tmp[tmp == "NA"] <- NA
 
-sum(is.na(test))
+sum(is.na(tmp))
 
-
+head(tmp)
 ###
 library(quanteda)
 
