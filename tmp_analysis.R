@@ -7,10 +7,30 @@ elements <- lapply(out_list_ToS, function(x) {
   }
 })
 
-elements
-sum(!is.na(elements))
+#elements
+#sum(!is.na(elements))
 
-lapply(elements, tail, 1)
+#lapply(elements, tail, 1)
 
-tail(elements) # last elements
-tail(instance_name)
+#tail(elements) # last elements
+#tail(instance_name)
+
+
+# convert list to dataframe
+tmp <- data.frame(instance = names(elements), tos = sapply(elements, paste, collapse = ","), row.names = NULL) 
+
+#test <- data.frame(instance = names(elements), tos = sapply(elements, paste, collapse = ";"), row.names = NULL)
+
+# paste converts NA to class character
+tmp[tmp == "NA"] <- NA
+
+sum(is.na(tmp))
+
+head(tmp)
+
+# Save an object to a file
+saveRDS(tmp, file = "ToS_1000.RData")
+
+# ca. 1/3 NA
+tmp_noNA <- na.omit(tmp)
+

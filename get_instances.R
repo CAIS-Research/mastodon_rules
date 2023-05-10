@@ -1,23 +1,23 @@
 # get instances
 # get all instances with n = 0
 
-instance <- get_fedi_instances(token = sec_tok, n = 1000)
+instance <- get_fedi_instances(token = sec_tok, n = 0)
 
 # only english
-instance_en <- get_fedi_instances(token = sec_tok, n = 0, language = "en")
+# instance_en <- get_fedi_instances(token = sec_tok, n = 0, language = "en")
 
 # only german
-instance_de <- get_fedi_instances(token = sec_tok, n = 0, language = "de")
+# instance_de <- get_fedi_instances(token = sec_tok, n = 0, language = "de")
 
-
-# get names
 instance_name <- instance$name
 instance_name
 
-nrow(instance)
 
-# only en
-nrow(instance_en)
+# top 1000 users
+instance_1000 <- instance[1:1000, ]
 
-instance_name <- instance_en$name
-names(instance_en)
+# get names top 1000 users
+instance_name <- instance_1000$name
+instance_name
+
+

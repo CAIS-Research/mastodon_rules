@@ -1,7 +1,14 @@
 # language detection
-result <- detect_language(tmp$tos)
+library(cld3)
+
+
+
+
+result <- detect_language(tmp_noNA$tos)
 result
-names(result)
 table(result)
 
-tmp$lang <- result
+#gleiches Resultat zwischen tmp und tmp_noNA
+#419 als default
+
+tmp_noNA$lang <- result
