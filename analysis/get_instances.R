@@ -1,7 +1,7 @@
 # get instances
 # get all instances with n = 0
 
-instance <- get_fedi_instances(token = sec_tok, n = 0)
+instance <- get_fedi_instances(token = sec_tok, n = 10)
 
 # only english
 # instance_en <- get_fedi_instances(token = sec_tok, n = 0, language = "en")

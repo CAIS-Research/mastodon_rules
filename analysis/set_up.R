@@ -1,10 +1,15 @@
 # set up
 
 # install.packages("rtoot")
+#install.packages("cld3")
+
 library(rtoot)
 library(readtext)
-#install.packages("cld3")
 library(cld3)
+library(rio)
+library(quanteda)
+library(tidyverse)
+
 # from rtoot package 
 
 vignette("auth")

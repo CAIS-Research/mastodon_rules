@@ -14,7 +14,8 @@ rules_en <- subset(ToS_fulldata, lang == "en")
 #create dfm
 my_corpus <- corpus(rules_en$tos)
 
-toks <- tokens(my_corpus, remove_punct = TRUE, remove_numbers = TRUE, remove_separators = TRUE) %>%
+toks <- tokens(my_corpus, remove_punct = TRUE, remove_numbers = TRUE, 
+               remove_separators = TRUE) %>%
   tokens_remove(c(stopwords("en"), stop_list_aktuell)) %>%
   tokens_wordstem() %>%
   tokens_ngrams(n = 1:2)
