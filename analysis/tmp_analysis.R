@@ -29,8 +29,8 @@ sum(is.na(tmp))
 head(tmp)
 
 # Save an object to a file
-saveRDS(tmp, file = "ToS_1000.RData")
-
+saveRDS(tmp, file = "ToS_fulldata.RData")
+saveRDS(tmp, file = "ToS_fulldata.rds")
 # ca. 1/3 NA
 tmp_noNA <- na.omit(tmp)
 
