@@ -6,6 +6,10 @@
 library(rtoot)
 library(readtext)
 library(cld3)
+library(rio)
+library(quanteda)
+library(tidyverse)
+
 # from rtoot package 
 
 vignette("auth")
