@@ -1,10 +1,10 @@
 # set up
 
 # install.packages("rtoot")
+#install.packages("cld3")
 
 library(rtoot)
 library(readtext)
-#install.packages("cld3")
 library(cld3)
 # from rtoot package 
 
