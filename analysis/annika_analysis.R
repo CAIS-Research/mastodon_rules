@@ -37,9 +37,9 @@ library(ggplot2)
 # clean text
 # remove non english text
 
-test_clean <- test[-c(10, 13, 29, 31, 32, 37, 40, 46, 55, 60, 63, 64, 65, 74, 82, 86, 101, 103, 110, 112, 119, 121, 125, 135, 145, 163, 167), ]
+#test_clean <- test[-c(10, 13, 29, 31, 32, 37, 40, 46, 55, 60, 63, 64, 65, 74, 82, 86, 101, 103, 110, 112, 119, 121, 125, 135, 145, 163, 167), ]
 
-test_clean <- na.omit(test_clean)
+#test_clean <- na.omit(test_clean)
 
 # Convert the dataframe to a quanteda corpus and generate tokens
 my_corpus <- corpus(data_clear_en$tos)
@@ -59,9 +59,9 @@ tmp.rules <- get_instance_general(c("fosstodon.org", "mastodon.social"))
 
 tmp.rules$text
 # wordcloud
-set.seed(100)
-library("quanteda.textplots")
-textplot_wordcloud(word_counts, min_count = 6, random_order = FALSE, rotation = 0.25,
+##set.seed(100)
+##library("quanteda.textplots")
+##textplot_wordcloud(word_counts, min_count = 6, random_order = FALSE, rotation = 0.25,
                    color = RColorBrewer::brewer.pal(8, "Dark2"))
 
 
