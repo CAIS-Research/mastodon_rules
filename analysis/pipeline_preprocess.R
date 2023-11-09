@@ -34,6 +34,7 @@ data_clear$lang <- result
 data_clear_en <- data_clear %>% filter(lang == "en")
 
 nrow(data_clear_en)
+
 #only english n = 4371
 
 
