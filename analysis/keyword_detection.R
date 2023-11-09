@@ -48,3 +48,14 @@ prop.table(table(df$overall))
 
 df_export_rules <- df %>% filter(research == 1 | scrape == 1 | ethics == 1)
 
+
+
+##Archiving
+df$archiving <- ifelse(str_detect(df$tos, pattern = c("archiv*")), 1, 0)
+
+table(df$archiving)
+
+tmp_archiving <- df %>% filter(archiving == 1)
+
+
+
