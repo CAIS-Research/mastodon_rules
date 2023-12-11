@@ -3,13 +3,17 @@
 # install.packages("rtoot")
 #install.packages("cld3")
 
+# get latest version
+remotes::install_github("gesistsa/rtoot")
+install.packages("tidyverse")
+
 library(rtoot)
 library(readtext)
 library(cld3)
 library(rio)
 library(quanteda)
 library(tidyverse)
-
+library(stringr)
 # from rtoot package 
 
 vignette("auth")
