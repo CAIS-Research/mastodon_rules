@@ -16,7 +16,7 @@ system.time(for (i in instance_name) {
 #  out_list_ToS[[i]] <- out
 # })
 
-tmp_social <- get_instance_general("mastodon.social")
+#tmp_social <- get_instance_general("mastodon.social")
 
 ## get full description
 out_list_ToS <- list()

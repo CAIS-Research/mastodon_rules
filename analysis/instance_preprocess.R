@@ -7,8 +7,8 @@ elements <- lapply(out_list_ToS, function(x) {
   }
 })
 
-#elements
-#sum(!is.na(elements))
+elements
+sum(!is.na(elements))
 
 #lapply(elements, tail, 1)
 
@@ -29,8 +29,9 @@ sum(is.na(tmp))
 head(tmp)
 
 # Save an object to a file
-saveRDS(tmp, file = "ToS_fulldata.RData")
-saveRDS(tmp, file = "ToS_fulldata.rds")
+saveRDS(tmp, file = "ToS_fulldata_aktuell.RData")
+saveRDS(tmp, file = "ToS_fulldata_aktuell.rds")
+
 # ca. 1/3 NA
 tmp_noNA <- na.omit(tmp)
 

@@ -1,5 +1,8 @@
+# plotting terms
+
 TermFreq <- textstat_frequency(dfm_topic, 20)
 
+# bigrams
 
 bigrams <- tokens_ngrams(toks, n = 2)
 bigrams_dfm <- dfm(bigrams)
@@ -24,4 +27,7 @@ bigrams_freq %>%
   scale_y_continuous(expand = c(0,0))+  
   coord_flip()+
   theme_minimal()
-          
+
+
+# output
+TermFreq

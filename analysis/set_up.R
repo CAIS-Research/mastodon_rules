@@ -1,11 +1,9 @@
 # set up
 
-# install.packages("rtoot")
-#install.packages("cld3")
-
+# install packages if not installed
 # get latest version
-remotes::install_github("gesistsa/rtoot")
-install.packages("tidyverse")
+# remotes::install_github("gesistsa/rtoot")
+
 
 library(rtoot)
 library(readtext)
@@ -14,6 +12,16 @@ library(rio)
 library(quanteda)
 library(tidyverse)
 library(stringr)
+library(summarytools)
+library(quanteda)
+library(quanteda.textstats)
+library(tidyverse)
+library(tidytext)
+library(ggplot2)
+library(lda)
+library(ldatuning)
+library(topicmodels)
+
 # from rtoot package 
 
 vignette("auth")
