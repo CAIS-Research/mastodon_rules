@@ -5,22 +5,18 @@
 # remotes::install_github("gesistsa/rtoot")
 
 
-library(rtoot)
-library(readtext)
-library(cld3)
-library(rio)
-library(quanteda)
-library(tidyverse)
-library(stringr)
-library(summarytools)
-library(quanteda)
-library(quanteda.textstats)
-library(tidyverse)
-library(tidytext)
-library(ggplot2)
-library(lda)
-library(ldatuning)
-library(topicmodels)
+#requiered packages: look if already installed
+requiredPackages <- c("rtoot", "readtext", "cld3", "rio", "quanteda", 
+                      "tidyverse", "stringr", "summarytools", "quanteda.textstats",
+                      "tidytext", "ggplot2", "lda", "ldatuning", "topicmodels") # packages
+
+for(p in requiredPackages){
+  if(!require(p,character.only = TRUE)) install.packages(p)
+  library(p,character.only = TRUE)
+}
+
+#lapply(requiredPackages, library, character.only = TRUE) #laden
+
 
 # from rtoot package 
 
@@ -35,8 +31,8 @@ auth_setup()
 
 
 
-# get access using api call with secret token
-# secret token is needed to get access to social.instances
+# get access using api call with secret token. Your own token is needed.
+# secret token is needed to get access to social.instances. 
 # save the token in a new object and use it in the get_fedi_instances() function
 
 # https://instances.social/api/token 
