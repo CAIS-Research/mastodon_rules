@@ -1,5 +1,6 @@
 # get instances
-# get all instances with n = 0
+# get all instances with n = 0 using rtoot-package
+# full data set all instances 05/2023 n = 17.390
 
 instance <- get_fedi_instances(token = sec_tok, n = 0)
 
@@ -12,7 +13,7 @@ instance <- get_fedi_instances(token = sec_tok, n = 0)
 instance_name <- instance$name
 instance_name
 
-
+# play around
 # top 1000 users
 instance_1000 <- instance[1:1000, ]
 

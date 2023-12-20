@@ -1,12 +1,17 @@
 # pipeline data preprocess
 
-## import data
+## import data to reproduce analysis. 
+## see subfolder data
+## all rules
+
+
 data <- import("data/Tos_fulldata.rds")
 
 nrow(data)
+
 #full set data n = 17.390
 
-#remove NA see preprocessing
+#remove NA see preprocessing and Ch. Data Collection for more details
 data <- na.omit(data)
 
 nrow(data)
@@ -20,7 +25,7 @@ data_clear <- data
 data_clear$tos <- gsub( "[.,*]", " ", trimws(data$tos))
 
 # only english rules
-## using language detection
+## using language detection with cld3 see language_detection.R
 
 result <- detect_language(data_clear$tos)
 result
@@ -40,6 +45,6 @@ names(data_clear_en)
 #only english n = 4371
 
 
-------###### End pipeline preprocess
+# End pipeline preprocess
 
 

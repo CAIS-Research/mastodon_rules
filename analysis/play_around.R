@@ -1,5 +1,9 @@
 # play around
 
+
+get_instance_rules(instance_name[1])
+
+
 #see 
 # https://mastodon.social/auth/sign_up
 out_list_ToS[["mamot.fr"]][["text"]]
