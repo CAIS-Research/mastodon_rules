@@ -26,7 +26,7 @@ tmp_data <- df %>% filter(research == 1)
 
 df$scrape <- ifelse(str_detect(df$tos, pattern = c("scrap*|collect*|copy|crawl*|mining")), 1, 0)
 
-table(df$research)
+table(df$scrape)
 
 table(df$research, df$scrape)
 
@@ -44,7 +44,7 @@ df$overall <- ifelse(df$research == 1 | df$scrape == 1 | df$ethics == 1, 1, 0)
 
 prop.table(table(df$overall))
 
-
+table(df$overall)
 
 df_export_rules <- df %>% filter(research == 1 | scrape == 1 | ethics == 1)
 
