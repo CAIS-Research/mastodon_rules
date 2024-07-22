@@ -8,7 +8,6 @@
 ## Get instances and rules
 Run the following scripts to call API, get instances and rules and save them as csv files in data subfolder.
 
-* 
 * get_instances.R
 * get_ToS.R
 * instance_preprocess.R
