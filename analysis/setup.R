@@ -5,7 +5,7 @@
 # remotes::install_github("gesistsa/rtoot")
 
 
-#requiered packages: look if already installed
+#required packages: check if already installed
 requiredPackages <- c("rtoot", "readtext", "cld3", "rio", "quanteda", 
                       "tidyverse", "stringr", "summarytools", "quanteda.textstats",
                       "tidytext", "ggplot2", "lda", "ldatuning", "topicmodels") # packages
@@ -15,7 +15,7 @@ for(p in requiredPackages){
   library(p,character.only = TRUE)
 }
 
-#lapply(requiredPackages, library, character.only = TRUE) #laden
+#lapply(requiredPackages, library, character.only = TRUE)
 
 
 # from rtoot package 
@@ -36,6 +36,4 @@ auth_setup()
 # save the token in a new object and use it in the get_fedi_instances() function
 
 # https://instances.social/api/token 
-
-
-
+# also see: https://gesistsa.github.io/rtoot/articles/auth.html

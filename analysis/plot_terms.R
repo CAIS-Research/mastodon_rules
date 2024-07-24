@@ -24,4 +24,3 @@ bigrams_freq %>%
   scale_y_continuous(expand = c(0,0))+  
   coord_flip()+
   theme_minimal()
-          

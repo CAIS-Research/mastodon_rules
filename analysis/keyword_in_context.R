@@ -96,15 +96,9 @@ tos_dfm <- tos_tok_gram %>% dfm() %>%
 topfeatures(tos_dfm, 15)
 
 #dictionary
-# ethic
+# ethics
 list_dict <- list("science", "research")
 dic_science <- dictionary(list(words = c("science", "research")))
 
 head(dfm_lookup(tos_dfm, dic_science))
 class(dic_science)
-
-# percentage ToS
-# most frequent issues, bigrams, trigrams
-# Who? no rules!
-# contact admins via mail: system wide messages, cooperation with admins?
-# interview admin with tos about science, research, etc

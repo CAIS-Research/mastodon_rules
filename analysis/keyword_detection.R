@@ -1,12 +1,12 @@
 # string detection
-# using our keyword-list
+# using our keyword list
 
 #"research*", "scien*", "scholar*", "academ*", "study*", "studies")
 
 
 df <- data_clear_en
 
-#key_words_research <- 
+# keywords research
 
 table(str_detect(df$tos, pattern = c("research*")))
 table(str_detect(df$tos, pattern = c("scien*")))
@@ -21,7 +21,7 @@ table(df$research)
 
 tmp_data <- df %>% filter(research == 1)
 
-## Scrapping
+## Scraping
 #"scrap*", "collect*", "copy", "crawl*","mining"
 
 df$scrape <- ifelse(str_detect(df$tos, pattern = c("scrap*|collect*|copy|crawl*|mining")), 1, 0)
@@ -50,12 +50,9 @@ df_export_rules <- df %>% filter(research == 1 | scrape == 1 | ethics == 1)
 
 
 
-##Archiving
+## Archiving
 df$archiving <- ifelse(str_detect(df$tos, pattern = c("archiv*")), 1, 0)
 
 table(df$archiving)
 
 tmp_archiving <- df %>% filter(archiving == 1)
-
-
-

@@ -1,11 +1,11 @@
 # get ToS
 
-out_list_ToS <- list()
+out_listrules <- list()
 
 # only
 system.time(for (i in instance_name) {
   out <- try(get_instance_rules(i)) #use try() to skip error messages
-  out_list_ToS[[i]] <- out
+  out_listrules[[i]] <- out
 })
 
 
@@ -13,18 +13,18 @@ system.time(for (i in instance_name) {
 # system.time(for (i in instance_name) {
 #  Sys.sleep(0.001)
 #  out <- try(get_instance_rules(i)) #use try() to skip error messages
-#  out_list_ToS[[i]] <- out
+#  out_listrules[[i]] <- out
 # })
 
 #tmp_social <- get_instance_general("mastodon.social")
 
 ## get full description
-out_list_ToS <- list()
+out_listrules <- list()
 
 # run with get_instance_general
 system.time(for (i in instance_name) {
   out <- try(get_instance_general(i)) #use try() to skip error messages
-  out_list_ToS[[i]] <- out
+  out_listrules[[i]] <- out
 })
 
 

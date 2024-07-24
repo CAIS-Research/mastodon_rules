@@ -1,4 +1,4 @@
-# Topicmodel
+# Topic model
 
 citation("topicmodels")
 
@@ -18,7 +18,7 @@ toks <- tokens(corpus_rules, remove_punct = TRUE, remove_numbers = TRUE,
   tokens_wordstem() %>%
   tokens_ngrams(n = 1:2)
 
-## Reihenfolge geändert: stopwords nach ngrams 
+## order changed: stopwords after ngrams 
 
 #toks <- tokens(my_corpus, remove_punct = TRUE, remove_numbers = TRUE, remove_separators = TRUE) %>%
   #tokens_ngrams(n = 1:2) %>%
@@ -39,7 +39,7 @@ dfm_topic <- dfm(toks) %>%
 
 topfeatures(dfm_topic, 50)
 
-# performance metrices
+# model performance metrics
 
 result <- FindTopicsNumber(
   dfm_topic,
@@ -66,7 +66,7 @@ topics_terms5 <- terms(lda_model5_dfm, 15)
 topics_terms6 <- terms(lda_model6_dfm, 10)
 topics_terms8 <- terms(lda_model8_dfm, 10)
 
-# final model with 7 topics based on performance metrics
+# final model with 7 topics based on model performance metrics
 
 lda_model7_dfm <- LDA(dfm_topic, k = 7)
 
@@ -81,7 +81,3 @@ topics_terms7
 dfm_topic$tmp_topics <- topics(lda_model7_dfm)
 
 table(dfm_topic$tmp_topics)
-
-
-
-

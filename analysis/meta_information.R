@@ -1,9 +1,9 @@
-#meta information
+#meta-information
 
 table(data_clear_en$instance)
 table(instance$name)
 
-# daten duplizieren
+# duplicate data
 tmp <- data_clear_en
 
 tmp$name <- data_clear_en$instance
@@ -27,7 +27,7 @@ install.packages("summarytools")
 
 descr(tmp_full$users)
 
-# plotting distribution
+# plot distribution
 
 ggplot(tmp_full, aes(x = users)) +
   geom_histogram() +
@@ -53,7 +53,7 @@ top15 <- top_n(tmp_full, 15, users)
 top15$name
 
 
-# instances with less then 5 users
+# instances with fewer than 5 users
 
 instances_less <- tmp_full[which(tmp_full$users < 5),]
 
@@ -62,7 +62,7 @@ prop.table(table(instances_less$open_registrations))
 
 
 
-mastodon_instanzen <- c(
+mastodon_instances <- c(
   "mastodon.pirateparty.be",
   "julialang.social",
   "www.librepunk.club",
@@ -84,10 +84,4 @@ mastodon_instanzen <- c(
 
 
 # filter instances
-filter_df <- instance[instance$name %in% mastodon_instanzen,]
-
-
-
-
-
-
+filter_df <- instance[instance$name %in% mastodon_instances,]

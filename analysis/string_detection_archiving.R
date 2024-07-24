@@ -1,6 +1,6 @@
 # string detection archiving
 
-##Archiving
+## Archiving
 df$archiving <- ifelse(str_detect(df$tos, pattern = c("archiv*")), 1, 0)
 
 table(df$archiving)

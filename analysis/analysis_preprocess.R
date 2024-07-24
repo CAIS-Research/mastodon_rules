@@ -26,7 +26,7 @@ dfm_topic <- dfm(toks) %>%
   dfm_subset(ntoken(.) > 0)
 
 
-# get the topfeatures
-# no data access addressed
+# get the top features
+# note: data access not addressed
 
 topfeatures(dfm_topic, 50)
