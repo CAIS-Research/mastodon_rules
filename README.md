@@ -20,12 +20,12 @@ You can run the following scripts to call the *Mastodon* API, get instances and 
 
 * pipeline_preprocess.R (see language_detection.R for more details)
 * analysis_preprocess.R
+* language_detection.R for language detection
 
-Additional analysis scripts
+## Analysis
 
 * meta_information.R for instance information
-* language_detection.R for language detection
 * keyword_detection.R and keyword_in_context.R for string detection
 * topicmodeling.R and topic_model_finalR for LDA topic modeling
 * plot_terms.R for visualization
-* bi_trigram.R for bi- and trigrams 
+* bi_trigram.R for bi- and trigrams
